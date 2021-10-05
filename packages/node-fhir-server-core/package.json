@@ -1,5 +1,5 @@
 {
-  "name": "@asymmetrik/node-fhir-server-core",
+  "name": "@projecttacoma/node-fhir-server-core",
   "version": "2.2.4",
   "description": "Node FHIR Rest API Server",
   "license": "MIT",
