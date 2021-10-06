@@ -140,7 +140,7 @@ module.exports = {
     fhirtype: 'token',
     xpath: 'CarePlan.status',
     definition: 'http://hl7.org/fhir/SearchParameter/CarePlan-status',
-    description: 'draft | active | on-hold | revoked | completed | entered-in-error | unknown',
+    description: 'draft | active | suspended | completed | entered-in-error | cancelled | unknown',
   },
   subject: {
     type: 'reference',

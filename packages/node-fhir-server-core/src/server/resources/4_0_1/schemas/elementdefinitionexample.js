@@ -7,7 +7,7 @@ module.exports = class ElementDefinitionExample {
     // Create an object to store all props
     Object.defineProperty(this, '__data', { value: {} });
 
-    // Define getters and setters as enumerable
+    // Define getters and setters as enumerablefd*&rzaU
 
     Object.defineProperty(this, '_id', {
       enumerable: true,

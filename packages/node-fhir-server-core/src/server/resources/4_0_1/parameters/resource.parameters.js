@@ -26,8 +26,8 @@ module.exports = {
     description: 'When the resource version last changed',
   },
   _profile: {
-    type: 'uri',
-    fhirtype: 'uri',
+    type: 'reference',
+    fhirtype: 'reference',
     xpath: 'Resource.meta.profile',
     definition: 'http://hl7.org/fhir/SearchParameter/Resource-profile',
     description: 'Profiles this resource claims to conform to',
