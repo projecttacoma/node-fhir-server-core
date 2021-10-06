@@ -125,7 +125,7 @@ describe('FHIR Response Utility', () => {
       const results = { id: 'foo', resource_version: '1' };
       handler.create(req, res, results, { type: 'Patient' });
 
-      const expectedContentLocation = 'https://localhost:3000/4_0_1/Patient/foo/_history/1';
+      let expectedContentLocation = 'https://localhost:3000/4_0_1/Patient/foo/_history/1';
 
       expect(res.set.mock.calls).toHaveLength(3);
       expect(res.set.mock.calls[0][0]).toBe('Content-Location');
@@ -196,7 +196,7 @@ describe('FHIR Response Utility', () => {
       const results = { id: 'foo', resource_version: '1', created: true };
       handler.update(req, res, results, { type: 'Patient' });
 
-      const expectedContentLocation = 'https://localhost:3000/4_0_1/Patient/foo/_history/1';
+      let expectedContentLocation = 'https://localhost:3000/4_0_1/Patient/foo/_history/1';
 
       expect(res.set.mock.calls).toHaveLength(4);
       expect(res.set.mock.calls[0][0]).toBe('Content-Location');
