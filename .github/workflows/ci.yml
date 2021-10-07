@@ -13,8 +13,8 @@ on:
 jobs:
   CI:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v2
-      - name: action-yarn
+      - name: RUn unit tests
+        run: yarn install --frozen-lockfile
         run: yarn lerna run test
