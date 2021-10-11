@@ -38,6 +38,19 @@ describe('FHIR Response Utility', () => {
     });
   });
 
+  describe('testOp', () => {
+    test('testing testOp', () => {
+      const results = { results: 'GOLD' };
+      handler.testOp(req, res, results);
+
+      expect(res.type.mock.calls).toHaveLength(1);
+      expect(res.type.mock.calls[0][0]).toBe('application/fhir+json');
+
+      expect(res.status.mock.calls).toHaveLength(1);
+      expect(res.status.mock.calls[0][0]).toBe(400);
+    });
+  });
+
   describe('read', () => {
     test('should set the correct status code', () => {
       const results = { results: 'GOLD' };
