@@ -12,10 +12,8 @@ module.exports.operationsPost = function operationsPost({
 
   return (req, res, next) => {
     let { base_version, id } = req.sanitized_args;
-    let resource_body = req.body;
-    let args = { id, base_version, resource: resource_body };
-
-    service[name](args, { req }, deprecatedLogger)
+    req.sanitized_args.resource = req.body; 
+    service[name](req.sanitized_args, { req }, deprecatedLogger)
       .then((results) => handler.read(req, res, results))
       .catch(next);
   };
