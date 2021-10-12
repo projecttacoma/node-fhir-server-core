@@ -1,4 +1,3 @@
-const { appendFile } = require('fs');
 const path = require('path');
 
 const contentTypeMap = {
