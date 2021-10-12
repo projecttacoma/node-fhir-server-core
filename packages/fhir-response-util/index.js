@@ -1,7 +1,5 @@
 const { appendFile } = require('fs');
 const path = require('path');
-const express = require('express');
-const app = express();
 
 const contentTypeMap = {
   '1_0_2': 'application/json+fhir',
@@ -20,36 +18,20 @@ function getContentType(version) {
 }
 
 /**
- * Override of Express's status() function to check if a status exists before
- * setting the status to the specified statusCode
- * @param {number} statusCode
+ * @function operation
+ * @description Used when you are calling a custom operation
+ * @param {Express.req} req - Express request object
+ * @param {Express.res} res - Express response object
+ * @param {Object} json - json to send to client
  */
-// express.response.status = function (statusCode) {
-//   if (this.response) {
-//     if (this.statusCode === undefined) {
-//       this.statusCode = statusCode;
-//     }
-//   }
-// };
-
-express.response.status = (statusCode) => {
-  if (this.statusCode === undefined) {
-    this.statusCode = statusCode;
-  }
-};
-
-// // try doing the above without doing an override in express
-// function setResponseStatus(res, statusCode) {
-//   if (res.statusCode === undefined) {
-//     res.statusCode = statusCode;
-//   }
-// }
-
-function testOp(req, res, json) {
+function operation(req, res, json) {
   let fhirVersion = req.params.base_version;
   res.type(getContentType(fhirVersion));
-  res.status(400).json(json);
-  //res.json(json);
+  if (res.statusCode) {
+    return res.json(json);
+  }
+  // default to 200
+  return res.status(200).json(json);
 }
 
 /**
@@ -182,5 +164,5 @@ module.exports = {
   update,
   remove,
   history,
-  testOp,
+  operation,
 };
