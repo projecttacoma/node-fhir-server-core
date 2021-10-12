@@ -52,7 +52,5 @@
   "engines": {
     "node": ">=10.13.0"
   },
-  "dependencies": {
-    "express": "^4.17.1"
-  }
+  "dependencies": {}
 }
