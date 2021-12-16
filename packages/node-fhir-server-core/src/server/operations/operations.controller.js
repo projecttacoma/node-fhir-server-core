@@ -11,7 +11,6 @@ module.exports.operationsPost = function operationsPost({
   let { serviceModule: service } = profile;
 
   return (req, res, next) => {
-
     req.sanitized_args.resource = req.body;
     service[name](req.sanitized_args, { req }, deprecatedLogger)
       .then((results) => handler.operation(req, res, results))
