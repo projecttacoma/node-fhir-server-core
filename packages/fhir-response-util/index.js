@@ -138,9 +138,9 @@ function remove(_req, res, json) {
     res.set('ETag', json.deleted);
   }
 
-  if(json && (json.resourceType === 'Bundle' || json.resourceType === 'OperationOutcome')){
+  if (json && (json.resourceType === 'Bundle' || json.resourceType === 'OperationOutcome')) {
     res.status(200).json(json);
-  }else{
+  } else {
     res.status(204).end();
   }
 }
