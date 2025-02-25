@@ -932,10 +932,10 @@
   resolved "https://registry.yarnpkg.com/@nicolo-ribaudo/chokidar-2/-/chokidar-2-2.1.8-no-fsevents.3.tgz#323d72dd25103d0c4fbdce89dadf574a787b1f9b"
   integrity sha512-s88O1aVtXftvp5bCPB7WnmXc5IwOZZ7YPuwNPt+GtOOXpPvad1LfbmjYv+qII7zP6RU2QGnqve27dnLycEnyEQ==
 
-"@projecttacoma/fhir-response-util@^1.2.5":
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/@projecttacoma/fhir-response-util/-/fhir-response-util-1.2.5.tgz#8c86690236cce0ac963b9d2d50df632e06c28f27"
-  integrity sha512-Vvz3DcXZ2YRWwPbKeqAzeheykiWYcRO5WdXEz6iQKlPgFQHFB3rml7g3NcEkTrxlwwDb0C86Yg682PJDW1Q0GA==
+"@projecttacoma/fhir-response-util@^1.3.0":
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/@projecttacoma/fhir-response-util/-/fhir-response-util-1.3.0.tgz#8782186294581c59b9483a5c699579445b033528"
+  integrity sha512-isPMoLabjZEwlc5pQid/XBCDyTAB0NQlzI+NH/xAChYx68ooVDB9tq0yRbmFBAdJ/cLhq5QbLP9ImVhRiViBeA==
 
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
